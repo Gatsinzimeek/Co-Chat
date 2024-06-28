@@ -7,7 +7,7 @@ import { signOut } from "next-auth/react";
 
 import useConversation from "./useConversation";
 
-const usRoutes = () => {
+const useRoutes = () => {
     const pathname = usePathname();
 
     const {conversationId} = useConversation();
@@ -32,4 +32,8 @@ const usRoutes = () => {
             icon: HiArrowLeftOnRectangle
         }
     ],[conversationId,pathname]);
+
+    return route
 }
+
+export default useRoutes
