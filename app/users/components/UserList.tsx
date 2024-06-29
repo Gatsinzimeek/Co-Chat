@@ -4,7 +4,7 @@ import { User } from "@prisma/client";
 import UserBox from "./UserBox";
 
 interface UserListProps{
-  items: User
+  items: User[]
 }
 
 const UserList: React.FC<UserListProps> = ({items}) => {
@@ -18,7 +18,6 @@ const UserList: React.FC<UserListProps> = ({items}) => {
             </div>
         </div>
         {
-          //@ts-expect-error
           items.map((item:any) => (
             <UserBox key={item.id} data={item} />
           ))
