@@ -33,6 +33,7 @@ const ConversationList: React.FC<conversationListProps> = ({initialItems}) => {
         </div>
         {
             items.map(item =>(
+                //@ts-expect-error
                 <ConversationBox key={item.id} data={item} selected={conversationId === item.id}/>
             ))
         }
