@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { Fragment, useMemo } from "react";
 import {Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react"
 import {IoClose} from "react-icons/io5"
+import Avatar from "@/app/Components/Avatar";
 
 interface ProfileDrawerProps {
     isOpen: boolean;
@@ -53,6 +54,13 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isOpen, onclose, data}) =>
                                                     <span className="sr-only">Close panel</span>
                                                     <IoClose size={24} />
                                                 </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                                        <div className="flex flex-col items-center">
+                                            <div className="mb-2">
+                                                <Avatar user={otherUser} />
                                             </div>
                                         </div>
                                     </div>
