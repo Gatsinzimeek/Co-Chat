@@ -76,7 +76,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({isOpen, onclose, data}) =>
                                                     {statusText}
                                                 </div>
                                                 <div className="flex gap-10 my-8 ">
-                                                    <div onClick={() => setIsmodalOpen(true)} className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75">
+                                                    <div onClick={() => setIsmodalOpen(true  )} className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75">
                                                         <div  className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center">
                                                             <IoTrash size={20} />
                                                         </div>
